@@ -14,14 +14,15 @@ class Lift{
 
     move(number){
         if(number>this.currentFloor){
-            this.currentFloorAmount += (number-this.currentFloor); 
+            this.currentFloorAmount += (number-this.currentFloor);
         }else if(number<this.currentFloor){
-            this.currentFloorAmount += (this.currentFloor - number);  
+            this.currentFloorAmount += (this.currentFloor - number); 
         }else{
             return;
         }
         this.currentFloor=number;
     }
+
 
     updateDisplay(){
         this.actualFloor.innerText = this.currentFloor;
