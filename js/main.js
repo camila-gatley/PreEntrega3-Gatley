@@ -14,9 +14,9 @@ class Lift{
 
     move(number){
         if(number>this.currentFloor){
-            this.currentFloorAmount += (number-this.currentFloor); // la variable this.currentflooramount se resetea cada vez que corre la funcion, por eso el contador no estaria funcionando. No estoy segura como hacer para que una variable mantenga su valor dsps que termina la funcion. Incluso intente con una variable global, pero me da NaN.
+            this.currentFloorAmount += (number-this.currentFloor); 
         }else if(number<this.currentFloor){
-            this.currentFloorAmount += (number - this.currentFloor); 
+            this.currentFloorAmount += (this.currentFloor - number);  
         }else{
             return;
         }
